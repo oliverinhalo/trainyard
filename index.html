@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Trainyard — train an image classifier in your browser</title>
+    <meta
+      name="description"
+      content="Record examples from your webcam, name them, and train an image classifier in seconds. Runs entirely in your browser: free, no account, nothing uploaded."
+    />
+    <link rel="canonical" href="https://trainyard.pages.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trainyard — train an image classifier in your browser" />
+    <meta
+      property="og:description"
+      content="Record examples from your webcam, name them, and train an image classifier in seconds. Runs entirely in your browser: free, no account, nothing uploaded."
+    />
+    <meta property="og:image" content="https://trainyard.pages.dev/og.png" />
+    <meta property="og:url" content="https://trainyard.pages.dev/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://trainyard.pages.dev/og.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#12100c" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f5ee" media="(prefers-color-scheme: light)" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Trainyard",
+        "description": "Record examples from your webcam, name them, and train an image classifier in seconds. Runs entirely in your browser: free, no account, nothing uploaded.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+
+    <script>
+      // Apply the stored theme before first paint so there is no flash.
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch (e) {
+        /* private mode: fall back to the media query */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript
+      >Trainyard trains an image classifier in your browser, so it needs JavaScript turned
+      on.</noscript
+    >
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
